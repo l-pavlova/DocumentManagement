@@ -1,5 +1,4 @@
-﻿using BCrypt.Net;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;
 using System.Linq;
 

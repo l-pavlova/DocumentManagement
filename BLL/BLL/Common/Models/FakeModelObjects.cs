@@ -1,11 +1,7 @@
-﻿using DocManagement;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-namespace DocManagement { 
+namespace DocManagement
+{
     public static class FakeModelObjects
     {
         public static readonly Guid FakeGuid = Guid.NewGuid();
