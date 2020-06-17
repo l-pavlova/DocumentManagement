@@ -12,11 +12,13 @@ namespace LucySNamespace.DocManagement
 {
     public partial class AddForm : Form
     {
-        private const int pathLenght = 10;
-        private const int StartIndex = 9;
+        private const int START_INDEX = 9;
+        private const int PATH_LENGTH = 10;
         private string filePath = string.Empty;
         ManagingDocsFacade fasade;
-        FileInfo info = null;
+        FileInfo info;
+        User user;
+        Cabinet cabinet;
         public AddForm()
         {
             InitializeComponent();
@@ -27,7 +29,9 @@ namespace LucySNamespace.DocManagement
             {
                 tb.Validating += TextBox_Validating;
             }
-        }
+            this.user = FakeModelObjects.GetUser();
+            this.cabinet = FakeModelObjects.GetCabinet(this.user);
+}
         private void TextBox_Validating(object sender, EventArgs e)
         {
             TextBox currenttb = (TextBox)sender;
@@ -56,7 +60,7 @@ namespace LucySNamespace.DocManagement
         {
             if (ValidateForm())
             {
-                filePath = PathLabel.Text.Substring(StartIndex);
+                filePath = PathLabel.Text.Substring(START_INDEX);
                 info = new FileInfo(filePath);
                 var g = Guid.NewGuid();
                 Document d = new Document
@@ -70,9 +74,10 @@ namespace LucySNamespace.DocManagement
                     Description = DescriptionTextBox.Text.Trim(),
                     Phone = PhoneTextBox.Text.Trim(),
                     DocumentDate = dateTimePicker1.Value.ToUniversalTime(),
-                    FilePath = filePath
+                    FilePath = filePath,
+                    UserId=user.Id,
+                    Cabinet=cabinet.Id
                 };
-
                 var list = new List<Document>();
                 list.Add(d);
                 this.fasade.AddItems("FileCabinet", list);
@@ -88,7 +93,7 @@ namespace LucySNamespace.DocManagement
             {
                 if (!string.IsNullOrWhiteSpace(textBox.Text))
                 {
-                    if (PathLabel.Text.Length <= pathLenght)
+                    if (PathLabel.Text.Length <= PATH_LENGTH)
                     {
                         MessageBox.Show("Select file please");
                         return false;

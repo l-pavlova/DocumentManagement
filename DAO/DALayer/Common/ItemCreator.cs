@@ -27,17 +27,11 @@ namespace DocManagement
                 foreach (var prop in obj.GetType().GetProperties())
                 {
                     MapAttribute mapAttr = (MapAttribute)Attribute.GetCustomAttribute(prop, typeof(MapAttribute));
-                    //try
+                    if (mapAttr != null)
                     {
-                        if (mapAttr != null)
-                        {
-                            prop.SetValue(obj, Convert.ChangeType(row[mapAttr.Name], prop.PropertyType), null);
-                        }
+                        prop.SetValue(obj, Convert.ChangeType(row[mapAttr.Name], prop.PropertyType), null);
                     }
-                    /*catch
-                    {
 
-                    }*/
                 }
 
                 list.Add(obj);

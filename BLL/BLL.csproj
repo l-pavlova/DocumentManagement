@@ -69,6 +69,7 @@
     <Compile Include="BLL\Common\Models\Cabinet.cs" />
     <Compile Include="BLL\Common\Models\Document.cs" />
     <Compile Include="BLL\Common\Extensions.cs" />
+    <Compile Include="BLL\Common\Models\FakeModelObjects.cs" />
     <Compile Include="BLL\Exceptions\InvalidNamesException.cs" />
     <Compile Include="BLL\Exceptions\InvalidPasswordException.cs" />
     <Compile Include="BLL\Exceptions\UserAlreadyExistsException.cs" />

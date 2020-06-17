@@ -19,7 +19,6 @@ namespace DocManagement
       
         public static Adapter<T> GetAdapter(Lazy<MapConfigEnum> type, Dictionary<string, string> maps)
         {
-            //MapConfigEnum type = (MapConfigEnum)Enum.Parse(typeof(MapConfigEnum), (WebConfigurationManager.AppSettings["MappingConfigStrategy"]));
            
             switch (type.Value)
             {

@@ -12,7 +12,6 @@ namespace DocManagement
     public static class ConnectionFactory
     {
         
-        //try break, put actaull pool if no work update: it work!
         private static string GetConnection()
         {
             return WebConfigurationManager.ConnectionStrings["DocManagement.Properties.Settings.Setting"].ConnectionString;

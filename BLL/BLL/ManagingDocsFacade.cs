@@ -17,11 +17,8 @@ namespace DocManagement
         private IAdapter<User> userAdapter;
         private IAdapter<Cabinet> cabinetAdapter;
         private Mappings maps;
-        //todo: 2.pass config only once
-        //do a singleton pattern for mapping config and then for configstratwgy
-        //lazy design pattern
-        //check lazy class
-        public void TestSingleton()
+       
+        public void InitializeAdapters()
         {
             maps = Mappings.GetMappings();
             adapter = AdapterFactory<Document>.GetAdapter(maps.ConfigStrategy, maps.Mapping.Value);
@@ -31,19 +28,10 @@ namespace DocManagement
 
         public ManagingDocsFacade()
         {
-            
-            TestSingleton();
-
-            //adapter = AdapterFactory<Document>.GetAdapter();
-            //userAdapter = AdapterFactory<User>.GetAdapter();
-            //cabinetAdapter = AdapterFactory<Cabinet>.GetAdapter();
+            InitializeAdapters();
         }
         public void AddItems(string tablename, List<Document> docs)
         {
-            for (int i = 0; i < docs.Count; i++)
-            {
-                docs[i].UserId = AuthenticationManager.ParseUserToken(docs[i].UserId).Id;
-            }
             this.adapter.InsertItems(tablename, docs);
         }
 

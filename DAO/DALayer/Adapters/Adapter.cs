@@ -18,12 +18,6 @@ namespace DocManagement
     public class Adapter<T> : IAdapter<T> where T : class, new()
     {
         private SqlConnection con = ConnectionFactory.GetDbConnection();
-        //todo: z ask if it's ok like this
-        //SqlConnection con1 = ConnectionFactory.GetDbConnection();
-        //private SqlConnection con2 = ConnectionFactory.GetDbConnection();
-        //private SqlConnection con3 = ConnectionFactory.GetDbConnection();
-        //private SqlConnection con4 = ConnectionFactory.GetDbConnection();
-        //private SqlConnection con5 = ConnectionFactory.GetDbConnection();
         private DataTable dt;
         private StringBuilder select;
         private StringBuilder add;
@@ -31,7 +25,6 @@ namespace DocManagement
         private StringBuilder update;
 
         protected static Dictionary<string, string> Mappings { get; private set; }
-        // ItemMappings.GetConfigurationUsingSection();
         private string CreateCondition(ICondition condition)
         {
 
@@ -152,7 +145,7 @@ namespace DocManagement
         public List<T> GetItems(string table, IEnumerable<string> columns = null, IEnumerable<Condition> conditions = null)
         {
 
-            //todo: 999 create abstract query put impls in facade use in selects 
+            //todo: create abstract query put impls in facade use in selects 
             return Select(table, columns, conditions).DataTableToList<T>();
         }
         public DataTable Select(string table, IEnumerable<string> columns = null, IEnumerable<Condition> conditions = null)
@@ -187,11 +180,6 @@ namespace DocManagement
             try
             {
                 con.Open();
-                /*con1.Open();
-                con2.Open();
-                con3.Open();
-                con4.Open();
-                con5.Open();*/
                 adapter.Fill(dt);
                 adapter.Dispose();
             }

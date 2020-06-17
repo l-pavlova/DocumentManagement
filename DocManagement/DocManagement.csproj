@@ -78,7 +78,6 @@
     <Compile Include="MappingConfig\DBMapping.cs" />
     <Compile Include="MappingConfig\DictionaryMappings.cs" />
     <Compile Include="MappingConfig\DTmapping.cs" />
-    <Compile Include="MappingConfig\TestSerializationOfMaps.cs" />
     <Compile Include="MiniDocumentManagementDataSet.cs">
       <DependentUpon>MiniDocumentManagementDataSet.xsd</DependentUpon>
     </Compile>
