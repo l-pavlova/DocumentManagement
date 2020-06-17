@@ -5,3 +5,10 @@ C:\Projects\filestorage\DAO\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Projects\filestorage\DAO\obj\Debug\DAO.dll
 C:\Projects\filestorage\DAO\obj\Debug\DAO.pdb
 C:\Projects\filestorage\DAO\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Projects\CleanCodeFinalProject\DAO\bin\Debug\DALayer\Common\CustomSettings.xml
+C:\Projects\CleanCodeFinalProject\DAO\bin\Debug\DAO.dll
+C:\Projects\CleanCodeFinalProject\DAO\bin\Debug\DAO.pdb
+C:\Projects\CleanCodeFinalProject\DAO\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Projects\CleanCodeFinalProject\DAO\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Projects\CleanCodeFinalProject\DAO\obj\Debug\DAO.dll
+C:\Projects\CleanCodeFinalProject\DAO\obj\Debug\DAO.pdb
