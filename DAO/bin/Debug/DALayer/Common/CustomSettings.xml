@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationSettings>
+  <add key="DocGuid" value="DocGuid"></add>
+  <add key="StoreDate" value="StoreDate"></add>
+  <add key="Size" value="DocumentSize"></add>
+  <add key="Price" value="Price"></add>
+  <add key="Contragent" value="Contragent"></add>
+  <add key="MailAddress" value="Mail"></add>
+  <add key="Description" value="Description"></add>
+  <add key="Phone" value="Phone"></add>
+  <add key="DocumentDate" value="DocumentDate"></add>
+  <add key="FilePath" value="FilePath"></add>
+</ApplicationSettings>

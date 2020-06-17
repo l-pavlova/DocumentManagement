@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DocManagement
+{
+    public class Statement : IStatement
+    {
+
+        public string ColumnName { get; set; }
+        public object Value { get; set; }
+
+        public Statement(object value, string colName = "")
+        {
+            ColumnName = colName;
+            Value = value;
+        }
+    }
+}

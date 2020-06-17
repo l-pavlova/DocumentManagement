@@ -1,0 +1,7 @@
+C:\Projects\filestorage\DAO\bin\Debug\DALayer\Common\CustomSettings.xml
+C:\Projects\filestorage\DAO\bin\Debug\DAO.dll
+C:\Projects\filestorage\DAO\bin\Debug\DAO.pdb
+C:\Projects\filestorage\DAO\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Projects\filestorage\DAO\obj\Debug\DAO.dll
+C:\Projects\filestorage\DAO\obj\Debug\DAO.pdb
+C:\Projects\filestorage\DAO\obj\Debug\DAL.csprojAssemblyReference.cache
