@@ -78,7 +78,7 @@ namespace LucySNamespace.DocManagement
                 };
                 var list = new List<Document>();
                 list.Add(d);
-                this.fasade.AddItems("FileCabinet", list);
+                this.fasade.AddItems(DatabaseTables.FileCabinet, list);
                 MessageBox.Show("Successfully added!");
                 this.Close();
             }

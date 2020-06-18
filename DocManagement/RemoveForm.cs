@@ -17,7 +17,7 @@ namespace LucySNamespace.DocManagement
         {
             try
             {
-                fasade.Delete("FileCabinet", guidText.Text);
+                fasade.Delete(DatabaseTables.FileCabinet, guidText.Text);
                 MessageBox.Show("File deleted from Database");
             }
             catch (ArgumentNullException)

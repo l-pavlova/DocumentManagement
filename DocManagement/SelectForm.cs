@@ -40,7 +40,7 @@ namespace LucySNamespace.DocManagement
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 var row = dataGridView1.SelectedRows[0];
-                string[] res = fasade.Populate("FileCabinet", Guid.Parse(row.Cells["DocGuid"].Value.ToString()));
+                string[] res = fasade.Populate(DatabaseTables.FileCabinet, Guid.Parse(row.Cells["DocGuid"].Value.ToString()));
                 editForm.SetValues(res);
             }
             editForm.ShowDialog(this);
@@ -68,7 +68,7 @@ namespace LucySNamespace.DocManagement
         private void ViewAllButton_Click(object sender, EventArgs e)
         {
 
-            List<Document> docs = fasade.ViewAllRecords("FileCabinet").ToList();
+            List<Document> docs = fasade.ViewAllRecords(DatabaseTables.FileCabinet).ToList();
             dataGridView1.DataSource = docs;
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
             {
@@ -85,7 +85,7 @@ namespace LucySNamespace.DocManagement
         {
             try
             {
-                dataGridView1.DataSource = fasade.ViewRecordByGuid("FileCabinet", Guid.Parse(textGuid.Text));
+                dataGridView1.DataSource = fasade.ViewRecordByGuid(DatabaseTables.FileCabinet, Guid.Parse(textGuid.Text));
                 EditButton.Visible = true;
             }
             catch (System.FormatException)

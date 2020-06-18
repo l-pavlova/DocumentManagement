@@ -13,7 +13,6 @@ namespace DocManagement
     public class Adapter<T> : IAdapter<T> where T : class, new()
     {
         private SqlConnection con = ConnectionFactory.GetDbConnection();
-        //private Mock<SqlConnection> con = new Mock<SqlConnection>();
         private DataTable dt;
         private StringBuilder select;
         private StringBuilder add;

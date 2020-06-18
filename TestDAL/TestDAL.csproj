@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdapterFactoryTests.cs" />
+    <Compile Include="AdapterTests.cs" />
     <Compile Include="AttributesTests.cs" />
     <Compile Include="CabinetTests.cs" />
     <Compile Include="ConditionsTests.cs" />

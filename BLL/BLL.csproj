@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="BLL\Common\AuthenticationManager.cs" />
     <Compile Include="BLL\Common\Models\Cabinet.cs" />
+    <Compile Include="BLL\Common\Models\DatabaseTables.cs" />
     <Compile Include="BLL\Common\Models\Document.cs" />
     <Compile Include="BLL\Common\Extensions.cs" />
     <Compile Include="BLL\Common\Models\FakeModelObjects.cs" />

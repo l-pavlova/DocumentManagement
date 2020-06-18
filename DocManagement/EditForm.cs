@@ -40,7 +40,7 @@ namespace DocManagement
                 FilePath = filepath
             };
 
-            fasade.Update("FileCabinet", document);
+            fasade.Update(DatabaseTables.FileCabinet, document);
             MessageBox.Show("Successfully eddited!");
             this.Close();
         }
