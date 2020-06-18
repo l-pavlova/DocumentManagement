@@ -15,9 +15,9 @@ namespace DocManagement
         public void InitializeAdapters()
         {
             maps = Mappings.GetMappings();
-            adapter = AdapterFactory<Document>.GetAdapter(maps.ConfigStrategy, maps.Mapping.Value);
-            userAdapter = AdapterFactory<User>.GetAdapter(maps.ConfigStrategy, maps.Mapping.Value);
-            cabinetAdapter = AdapterFactory<Cabinet>.GetAdapter(maps.ConfigStrategy, maps.Mapping.Value);
+            adapter = AdapterFactory<Document>.GetAdapter(maps.ConfigStrategy.Value, maps.Mapping.Value);
+            userAdapter = AdapterFactory<User>.GetAdapter(maps.ConfigStrategy.Value, maps.Mapping.Value);
+            cabinetAdapter = AdapterFactory<Cabinet>.GetAdapter(maps.ConfigStrategy.Value, maps.Mapping.Value);
         }
 
         public ManagingDocsFacade()
@@ -54,7 +54,7 @@ namespace DocManagement
         }
         public List<Cabinet> ViewCabinets(string tablename, string userId)
         {
-            var user = DocManagement.AuthenticationManager.ParseUserToken(userId);
+            var user = AuthenticationManager.ParseUserToken(userId);
             return this.cabinetAdapter.GetItem(tablename, user.Id);
         }
 
@@ -116,7 +116,6 @@ namespace DocManagement
 
             return res;
         }
-
 
     }
 }

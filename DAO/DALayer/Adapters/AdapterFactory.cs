@@ -12,10 +12,10 @@ namespace DocManagement
     public abstract class AdapterFactory<T> where T : class, new()
     {
       
-        public static Adapter<T> GetAdapter(Lazy<MapConfigEnum> type, Dictionary<string, string> maps)
+        public static Adapter<T> GetAdapter(MapConfigEnum type, Dictionary<string, string> maps)
         {
            
-            switch (type.Value)
+            switch (type)
             {
                 case MapConfigEnum.XMLSETTINGS:
                     {

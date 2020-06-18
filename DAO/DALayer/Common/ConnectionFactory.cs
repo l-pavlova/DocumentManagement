@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Configuration;
+using System.Data.SqlClient;
 using System.Web.Configuration;
 
 namespace DocManagement
@@ -8,7 +9,7 @@ namespace DocManagement
         
         private static string GetConnection()
         {
-            return WebConfigurationManager.ConnectionStrings["DocManagement.Properties.Settings.Setting"].ConnectionString;
+            return ConfigurationManager.ConnectionStrings["DocManagement.Properties.Settings.Setting"].ConnectionString;
         }
         public static SqlConnection GetDbConnection()
         {

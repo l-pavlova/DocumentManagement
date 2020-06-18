@@ -43,7 +43,7 @@
             this.add.TabIndex = 0;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.add.Click += new System.EventHandler(this.Add_Click);
             // 
             // remove
             // 
@@ -53,7 +53,7 @@
             this.remove.TabIndex = 1;
             this.remove.Text = "-";
             this.remove.UseVisualStyleBackColor = true;
-            this.remove.Click += new System.EventHandler(this.remove_Click);
+            this.remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // SelectButton
             // 

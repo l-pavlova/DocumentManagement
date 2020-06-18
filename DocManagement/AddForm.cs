@@ -25,12 +25,12 @@ namespace LucySNamespace.DocManagement
             this.OkButton.Click += OkButton_Click;
             foreach (TextBox tb in this.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
             {
-                tb.Validating += TextBox_Validating;
+                tb.Validating += TextBox_Validate;
             }
             this.user = FakeModelObjects.GetUser();
             this.cabinet = FakeModelObjects.GetCabinet(this.user);
 }
-        private void TextBox_Validating(object sender, EventArgs e)
+        private void TextBox_Validate(object sender, EventArgs e)
         {
             TextBox currenttb = (TextBox)sender;
             if (currenttb.Text == "")

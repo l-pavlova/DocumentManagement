@@ -110,3 +110,4 @@ D:\c#projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.csproj
 D:\c#projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.csproj.CopyComplete
 D:\c#projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.exe
 D:\c#projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.pdb
+D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\BLL.dll.config

@@ -73,3 +73,4 @@ D:\c#projects\CleanCodeFinalProject\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.c
 D:\c#projects\CleanCodeFinalProject\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\c#projects\CleanCodeFinalProject\BLL\obj\Debug\BLL.dll
 D:\c#projects\CleanCodeFinalProject\BLL\obj\Debug\BLL.pdb
+D:\c#projects\CleanCodeFinalProject\BLL\bin\Debug\BLL.dll.config

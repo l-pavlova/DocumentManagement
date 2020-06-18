@@ -9,7 +9,7 @@ namespace DocManagement
         public static Dictionary<string, string> GetConfigurationUsingSection()
         {
             var Settings = new Dictionary<string, string>();
-            var applicationSettings = WebConfigurationManager.GetSection("ApplicationSettings")
+            var applicationSettings = System.Configuration.ConfigurationManager.GetSection("ApplicationSettings")
                as NameValueCollection;
 
             if (applicationSettings.Count == 0)

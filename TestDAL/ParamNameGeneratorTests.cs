@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DocManagement
+namespace DocManagement.Tests
 {
     [TestClass]
     public class ParamNameGeneratorTests

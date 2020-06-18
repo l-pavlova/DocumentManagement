@@ -2,7 +2,7 @@
 using System.Data;
 using System.Linq;
 
-namespace DocManagement
+namespace DocManagement.Tests
 {
     [TestClass]
     public class ItemCreatorTests

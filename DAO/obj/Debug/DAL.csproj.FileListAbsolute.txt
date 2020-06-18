@@ -19,3 +19,12 @@ D:\c#projects\CleanCodeFinalProject\DAO\obj\Debug\DAL.csprojAssemblyReference.ca
 D:\c#projects\CleanCodeFinalProject\DAO\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\c#projects\CleanCodeFinalProject\DAO\obj\Debug\DAO.dll
 D:\c#projects\CleanCodeFinalProject\DAO\obj\Debug\DAO.pdb
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\Castle.Core.dll
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\Moq.dll
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\Castle.Core.xml
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\Moq.xml
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\c#projects\CleanCodeFinalProject\DAO\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\c#projects\CleanCodeFinalProject\DAO\obj\Debug\DAL.csproj.CopyComplete

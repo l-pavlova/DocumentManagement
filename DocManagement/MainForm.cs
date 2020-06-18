@@ -9,14 +9,14 @@ namespace LucySNamespace.DocManagement
             InitializeComponent();
         }
 
-        private void add_Click(object sender, EventArgs e)
+        private void Add_Click(object sender, EventArgs e)
         {
            
             var formPopup = new AddForm();
             formPopup.ShowDialog(this);
         }
 
-        private void remove_Click(object sender, EventArgs e)
+        private void Remove_Click(object sender, EventArgs e)
         {
             var formPopup = new RemoveForm();
             formPopup.ShowDialog(this);

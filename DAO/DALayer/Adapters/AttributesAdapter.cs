@@ -27,7 +27,7 @@ namespace DocManagement
 
             foreach (var info in propertyInfos)
             {
-                //10.todo:
+                
                 UserAttribute userAttr = (UserAttribute)Attribute.GetCustomAttribute(info, typeof(UserAttribute));
                 if (userAttr != null)
                 {

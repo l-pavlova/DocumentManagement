@@ -6,7 +6,7 @@ namespace DocManagement
 {
     public class Mappings
     {
-        private static volatile Mappings instance; //volatile for thread safety add locks if time 
+        private static volatile Mappings instance; //volatile for thread safety add locks later
         public  Lazy<Dictionary<string, string>> Mapping { get; private set; }
         public  Lazy<MapConfigEnum> ConfigStrategy { get; private set; }
         private Mappings()
