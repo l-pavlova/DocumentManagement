@@ -18,11 +18,11 @@ namespace LucySNamespace.DocManagement
             try
             {
                 fasade.Delete(DatabaseTables.FileCabinet, guidText.Text);
-                MessageBox.Show("File deleted from Database");
+                MessageBox.Show(FormValidationMessages.Deleted);
             }
             catch (ArgumentNullException)
             {
-                MessageBox.Show("Trying to delete without entering guid!");
+                MessageBox.Show(FormValidationMessages.DeleteError);
             }
 
             this.Close();

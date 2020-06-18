@@ -82,6 +82,7 @@
     <Compile Include="CabinetTests.cs" />
     <Compile Include="ConditionsTests.cs" />
     <Compile Include="DocumentTests.cs" />
+    <Compile Include="FacadeTests.cs" />
     <Compile Include="ItemCreatorTests.cs" />
     <Compile Include="MappingsTest.cs" />
     <Compile Include="ParamNameGeneratorTests.cs" />

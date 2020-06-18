@@ -43,7 +43,7 @@ namespace LucySNamespace.DocManagement
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Title = "Load Documents";
+                openFileDialog.Title = FormValidationMessages.Load;
                 openFileDialog.RestoreDirectory = true;
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -79,7 +79,7 @@ namespace LucySNamespace.DocManagement
                 var list = new List<Document>();
                 list.Add(d);
                 this.fasade.AddItems(DatabaseTables.FileCabinet, list);
-                MessageBox.Show("Successfully added!");
+                MessageBox.Show(FormValidationMessages.Added);
                 this.Close();
             }
         }
@@ -93,13 +93,13 @@ namespace LucySNamespace.DocManagement
                 {
                     if (PathLabel.Text.Length <= PATH_LENGTH)
                     {
-                        MessageBox.Show("Select file please");
+                        MessageBox.Show(FormValidationMessages.SelectFile);
                         return false;
                     }
                     return true;
                 }
             }
-            MessageBox.Show(string.Format("Fill at least one field please."));
+            MessageBox.Show(string.Format(FormValidationMessages.FillField));
             return false;
         }
 

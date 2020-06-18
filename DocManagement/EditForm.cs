@@ -41,7 +41,7 @@ namespace DocManagement
             };
 
             fasade.Update(DatabaseTables.FileCabinet, document);
-            MessageBox.Show("Successfully eddited!");
+            MessageBox.Show(FormValidationMessages.Editted);
             this.Close();
         }
 

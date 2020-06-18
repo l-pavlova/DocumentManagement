@@ -29,7 +29,7 @@ namespace LucySNamespace.DocManagement
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Trying to view without selecting date!");
+                MessageBox.Show(FormValidationMessages.ViewFailed);
             }
 
         }
@@ -90,7 +90,7 @@ namespace LucySNamespace.DocManagement
             }
             catch (System.FormatException)
             {
-                MessageBox.Show("Trying to view without selection guid!");
+                MessageBox.Show(FormValidationMessages.ViewFailed);
             }
 
         }
