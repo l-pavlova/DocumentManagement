@@ -43,7 +43,7 @@
             this.add.TabIndex = 0;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.Add_Click);
+            this.add.Click += new System.EventHandler(this.AddClick);
             // 
             // remove
             // 
@@ -53,7 +53,7 @@
             this.remove.TabIndex = 1;
             this.remove.Text = "-";
             this.remove.UseVisualStyleBackColor = true;
-            this.remove.Click += new System.EventHandler(this.Remove_Click);
+            this.remove.Click += new System.EventHandler(this.RemoveClick);
             // 
             // SelectButton
             // 
@@ -63,7 +63,7 @@
             this.SelectButton.TabIndex = 2;
             this.SelectButton.Text = "Get existing records";
             this.SelectButton.UseVisualStyleBackColor = true;
-            this.SelectButton.Click += new System.EventHandler(this.SelectButton_Click);
+            this.SelectButton.Click += new System.EventHandler(this.SelectButtonClick);
             // 
             // label1
             // 

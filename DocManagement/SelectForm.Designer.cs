@@ -32,12 +32,12 @@
             this.textGuid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.ViewAllButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.dateBeforePicker = new System.Windows.Forms.DateTimePicker();
             this.ViewBeforeButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // textGuid
@@ -68,11 +68,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 145);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(623, 258);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(24, 145);
+            this.dataGridView.Name = "dataGridView1";
+            this.dataGridView.Size = new System.Drawing.Size(623, 258);
+            this.dataGridView.TabIndex = 3;
             // 
             // ViewAllButton
             // 
@@ -118,13 +118,13 @@
             this.Controls.Add(this.dateBeforePicker);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.ViewAllButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.ViewButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textGuid);
             this.Name = "SelectForm";
             this.Text = "SelectForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,7 +135,7 @@
         private System.Windows.Forms.TextBox textGuid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ViewButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button ViewAllButton;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.DateTimePicker dateBeforePicker;

@@ -14,7 +14,7 @@ namespace LucySNamespace.DocManagement
             InitializeComponent();
             this.fasade = new ManagingDocsFacade();
             this.ViewAllButton.Click += ViewAllButton_Click;
-            this.dataGridView1.CellFormatting += DataGridView1_CellFormatting;
+            this.dataGridView.CellFormatting += DataGridView1_CellFormatting;
             this.EditButton.Click += EditData;
             this.ViewBeforeButton.Click += ViewByDate;
         }
@@ -24,7 +24,7 @@ namespace LucySNamespace.DocManagement
 
             try
             {
-                dataGridView1.DataSource = fasade.ViewRecordsByDate("FileCabinet", dateBeforePicker.Value);
+                dataGridView.DataSource = fasade.ViewRecordsByDate(DatabaseTables.FileCabinet, dateBeforePicker.Value);
                 EditButton.Visible = true;
             }
             catch (System.FormatException)
@@ -37,9 +37,9 @@ namespace LucySNamespace.DocManagement
         private void EditData(object sender, EventArgs e)
         {
             var editForm = new EditForm();
-            if (dataGridView1.SelectedRows.Count == 1)
+            if (dataGridView.SelectedRows.Count == 1)
             {
-                var row = dataGridView1.SelectedRows[0];
+                var row = dataGridView.SelectedRows[0];
                 string[] res = fasade.Populate(DatabaseTables.FileCabinet, Guid.Parse(row.Cells["DocGuid"].Value.ToString()));
                 editForm.SetValues(res);
             }
@@ -69,12 +69,12 @@ namespace LucySNamespace.DocManagement
         {
 
             List<Document> docs = fasade.ViewAllRecords(DatabaseTables.FileCabinet).ToList();
-            dataGridView1.DataSource = docs;
-            for (int i = 0; i < dataGridView1.Columns.Count; i++)
+            dataGridView.DataSource = docs;
+            for (int i = 0; i < dataGridView.Columns.Count; i++)
             {
-                if (dataGridView1.Columns[i].Name == "Price")
+                if (dataGridView.Columns[i].Name == "Price")
                 {
-                    dataGridView1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    dataGridView.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                     break;
                 }
             }
@@ -85,7 +85,7 @@ namespace LucySNamespace.DocManagement
         {
             try
             {
-                dataGridView1.DataSource = fasade.ViewRecordByGuid(DatabaseTables.FileCabinet, Guid.Parse(textGuid.Text));
+                dataGridView.DataSource = fasade.ViewRecordByGuid(DatabaseTables.FileCabinet, Guid.Parse(textGuid.Text));
                 EditButton.Visible = true;
             }
             catch (System.FormatException)

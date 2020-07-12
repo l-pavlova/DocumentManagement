@@ -12,7 +12,7 @@ namespace LucySNamespace.DocManagement
     {
         private const int START_INDEX = 9;
         private const int PATH_LENGTH = 10;
-        private string filePath = string.Empty;
+        private string filePath;
         ManagingDocsFacade fasade;
         FileInfo info;
         User user;
@@ -21,16 +21,16 @@ namespace LucySNamespace.DocManagement
         {
             InitializeComponent();
             fasade = new ManagingDocsFacade();
-
-            this.OkButton.Click += OkButton_Click;
+            filePath = string.Empty;
+            this.OkButton.Click += OkButtonClick;
             foreach (TextBox tb in this.Controls.OfType<TextBox>().Where(x => x.CausesValidation == true))
             {
-                tb.Validating += TextBox_Validate;
+                tb.Validating += TextBoxValidate;
             }
             this.user = FakeModelObjects.GetUser();
             this.cabinet = FakeModelObjects.GetCabinet(this.user);
-}
-        private void TextBox_Validate(object sender, EventArgs e)
+        }
+        private void TextBoxValidate(object sender, EventArgs e)
         {
             TextBox currenttb = (TextBox)sender;
             if (currenttb.Text == "")
@@ -39,7 +39,7 @@ namespace LucySNamespace.DocManagement
                 return;
             }
         }
-        private void OpenButton_Click(object sender, EventArgs e)
+        private void OpenButtonClick(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -54,7 +54,7 @@ namespace LucySNamespace.DocManagement
                 info = new FileInfo(filePath);
             }
         }
-        private void OkButton_Click(object sender, EventArgs e)
+        private void OkButtonClick(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
@@ -73,8 +73,8 @@ namespace LucySNamespace.DocManagement
                     Phone = PhoneTextBox.Text.Trim(),
                     DocumentDate = dateTimePicker1.Value.ToUniversalTime(),
                     FilePath = filePath,
-                    UserId=user.Id,
-                    Cabinet=cabinet.Id
+                    UserId = user.Id,
+                    Cabinet = cabinet.Id
                 };
                 var list = new List<Document>();
                 list.Add(d);

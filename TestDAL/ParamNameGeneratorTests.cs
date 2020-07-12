@@ -6,24 +6,25 @@ namespace DocManagement.Tests
     [TestClass]
     public class ParamNameGeneratorTests
     {
+        public const string testProp = "Entity property";
         [TestMethod]
         public void TestGenerateParamName()
         {
             var generator = new ParamNameGenerator();
-            var paramName = generator.GenerateParamName("Entity property");
-            Assert.AreEqual("@Entity property", paramName);
+            var paramName = generator.GenerateParamName(testProp);
+            Assert.AreEqual($"@{testProp}", paramName);
 
         }
         [TestMethod]
         public void TestGenerateParamNameForColumnsWithEqualName()
         {
             var generator = new ParamNameGenerator();
-            var paramName = generator.GenerateParamName("Entity property");
-            var paramName1 = generator.GenerateParamName("Entity property");
-            var paramName2 = generator.GenerateParamName("Entity property");
-            Assert.AreEqual("@Entity property", paramName);
-            Assert.AreEqual("@Entity property1", paramName1);
-            Assert.AreEqual("@Entity property2", paramName2);
+            var paramName = generator.GenerateParamName(testProp);
+            var paramName1 = generator.GenerateParamName(testProp);
+            var paramName2 = generator.GenerateParamName(testProp);
+            Assert.AreEqual($"@{testProp}", paramName);
+            Assert.AreEqual($"@{testProp}1", paramName1);
+            Assert.AreEqual($"@{testProp}2", paramName2);
         }
     }
 }

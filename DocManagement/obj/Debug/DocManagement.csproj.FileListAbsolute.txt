@@ -74,8 +74,6 @@ C:\Projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.csproj.C
 C:\Projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.exe
 C:\Projects\CleanCodeFinalProject\DocManagement\obj\Debug\DocManagement.pdb
 D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\CustomSettings.xml
-D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\ApplicationSettings.settings
-D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\ApplicationSettings.Designer.cs
 D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\DocManagement.exe.config
 D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\DocManagement.exe
 D:\c#projects\CleanCodeFinalProject\DocManagement\bin\Debug\DocManagement.pdb

@@ -12,17 +12,17 @@ namespace DocManagement
         {
             InitializeComponent();
             this.fasade = new ManagingDocsFacade();
-            this.OkButton.Click += OkButton_Click;
-            this.PreviewButton.Click += PreviewButton_Click;
+            this.OkButton.Click += OkButtonClick;
+            this.PreviewButton.Click += PreviewButtonClick;
         }
-        private void PreviewButton_Click(object sender, EventArgs e)
+        private void PreviewButtonClick(object sender, EventArgs e)
         {
             string filepath = PathLabel.Text;
             filepath = filepath.Replace("Filepath:", "");
             Process.Start(filepath);
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void OkButtonClick(object sender, EventArgs e)
         {
             string filepath = PathLabel.Text.Substring(9);
             FileInfo info = new FileInfo(filepath);

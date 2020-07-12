@@ -11,9 +11,9 @@ namespace LucySNamespace.DocManagement
         {
             InitializeComponent();
             this.fasade = new ManagingDocsFacade();
-            this.DeleteButton.Click += DeleteButton_Click;
+            this.DeleteButton.Click += DeleteButtonClick;
         }
-        private void DeleteButton_Click(object sender, EventArgs e)
+        private void DeleteButtonClick(object sender, EventArgs e)
         {
             try
             {

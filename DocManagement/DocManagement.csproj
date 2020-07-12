@@ -54,12 +54,6 @@
     <Compile Include="EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationSettings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>ApplicationSettings.settings</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +65,6 @@
     </Compile>
     <Compile Include="AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDialog.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="MappingConfig\DBMapping.cs" />
     <Compile Include="MappingConfig\DictionaryMappings.cs" />
@@ -219,11 +210,6 @@
     <EmbeddedResource Include="SelectForm.resx">
       <DependentUpon>SelectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="ApplicationSettings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>ApplicationSettings.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
